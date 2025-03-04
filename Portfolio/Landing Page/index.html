@@ -1,0 +1,95 @@
+<head>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+  <div id="header_name">Sara Cooper</div>
+</div>
+<!--javascript code to get the header to move on scroll-->
+<script>
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+    if (document.body.scrollTop >50 || document.documentElement.scrollTop >50) {
+      document.getElementById("header").style.height = "9%";
+    } else {
+      document.getElementById("header").style.height = "3%";
+    }
+  }
+</script>
+<div id=headshot_container>
+  <div id="headshot">
+    <img src="Sara Cooper Headshot_Trimmed.png"/>
+  </div>
+  <div id="title">
+    <div id="name">Sara Cooper</div>
+    <div id="divider_line"></div>
+    <div id="subtitle">I am a freelance journalist with a focus in health, environment & science reporting. I have particular expertise in data visualization and multimedia interactives.</div>
+  </div>
+</div>
+<div id="horizontal_divider1"></div>
+<div id="horizontal_divider2"></div>
+<div id="horizontal_divider3"></div>
+<div id="horizontal_divider4"></div>
+<div id="horizontal_divider5"></div>
+<h2>Recent Work</h2>
+<div id="recent_work">
+  <div class="work_sample">
+    <div class="headline_embed">
+      <div class="headline_title">
+        <a href ="https://www.chicagoreporter.com/its-time-to-talk-about-environmental-justice-in-cook-county/">It's Time to Talk About Environmental Justice in Cook County</a>
+        <div class="outlet">| The Chicago Reporter |</div>
+      </div>
+      <embed src="https://www.chicagoreporter.com/its-time-to-talk-about-environmental-justice-in-cook-county/">
+    </div>
+  </div>
+  <div class="work_sample">
+    <div class="headline_embed">
+      <div class="headline_title">
+        <a href ="https://climatechange.medill.northwestern.edu/the-antarctic-ice-sheet-is-melting-howd-it-happen-so-fast/">The Antarctic ice sheet is melting. How'd it happen so fast?</a>
+        <div class="outlet">| Medill Climate News |</div>
+      </div>
+      <embed src="https://climatechange.medill.northwestern.edu/the-antarctic-ice-sheet-is-melting-howd-it-happen-so-fast/">
+    </div>
+  </div>
+  <div class="work_sample">
+    <div class="headline_embed">
+      <div class="headline_title">
+        <a href ="https://climatechange.medill.northwestern.edu/far-from-a-glacial-pace-new-research-indicates-a-swift-end-to-the-last-ice-age/">Far from a glacial pace: New research indicates a swift end to the last ice age</a>
+        <div class="outlet">| Medill Climate News |</div>
+      </div>
+      <embed src="https://climatechange.medill.northwestern.edu/far-from-a-glacial-pace-new-research-indicates-a-swift-end-to-the-last-ice-age/">
+    </div>
+  </div>
+</div>
+<div id="horizontal_divider1"></div>
+<div id="Interactive_link">
+  <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Interactive%20Story/index.html">Featured Interactive Story</a>
+</div>
+<div id="horizontal_divider1"></div>
+<h2>Other Work Samples</h2>
+<div id="more_work">
+    <div id="work_type_1">
+      <div id="vertical_bar_2"></div>
+      <div class="work_type_text">
+        Data Visualization
+        <p>Turning numbers into meaning with beautifully designed charts, maps and infographics</p>
+        <div class="images_for_work_type">
+          <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data_Visualization/index.html"><img src="Data Visualization.png"></a>
+        </div>
+      </div>
+    </div>
+    <div id="work_type_2">
+      <div id="vertical_bar_2"></div>
+      <div class="work_type_text">
+        Video
+        <p>Short-form pieces explore topics on nature and outdoor recreation</p>
+        <div class="images_for_work_type">
+          <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Video/index.html"><img src="Play Button.png"></a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div id="space"></div>
+
+</body>
