@@ -1,3 +1,4 @@
+/*Standard Elements*/
 body {
     background-color: #ffffff;
 }
@@ -24,6 +25,13 @@ p {
     font-family: Helvetica, sans-serif;
     font-size:20px;
 }
+
+/*removes underline from hyperlinks*/
+a:link{
+    text-decoration: none;
+}
+
+/*id objects*/
 
 #text{
     margin-top:3%;
@@ -87,6 +95,9 @@ p {
     font-family:Helvetica,sans-serif;
 }
 
+
+/*class objects*/
+
 .header_links{
     margin-left:5%;
     margin-right: 5%;
@@ -110,11 +121,6 @@ p {
     height:40%;
 }
 
-/*removes underline from hyperlinks*/
-a:link{
-    text-decoration: none;
-}
-
 #story_sourcing{
     margin-top:50px;
     font-family:Helvetica,sans-serif;
@@ -136,4 +142,19 @@ a:link{
         width:100%;
         position:static;
     }
+
+#story_sourcing{
+    width:95%;
+}
+
+#text{
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#header{
+    width:100%;
+}
+
 }
