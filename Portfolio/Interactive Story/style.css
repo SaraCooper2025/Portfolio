@@ -8,6 +8,18 @@ h1{
     color:#0181C0;
 }
 
+ul{
+    font-size:20px;
+}
+
+ul a:link{
+    color:#0181C0;
+}
+
+ul a:visited{
+    color: #0181C0;
+}
+
 p {
     font-family: Helvetica, sans-serif;
     font-size:20px;
@@ -37,8 +49,11 @@ p {
     transition: 0.4s;
     top:0;
     z-index:100;
+    display:flex;
+    flex-direction:row;
 }
 
+/*size is fixed in Tableau embed code*/
 #viz1741060634541{
     margin-top:3%;
     position:static;
@@ -53,6 +68,67 @@ p {
 #header_name{
     color:rgb(255, 255, 255);
     font-family:helvetica, sans-serif;
+    font-weight:900;
+    align-content: center;
+    height: 100%;
+    margin-left:2%
+}
+
+#links_to_pages{
+    display:flex;
+    flex-direction:row;
+    color:white;
+    margin-right:0;
+    margin-left:auto;
+    border: 1px red;
+    align-items:center;
+    justify-content: center;
+    width:50%;
+    font-family:Helvetica,sans-serif;
+}
+
+.header_links{
+    margin-left:5%;
+    margin-right: 5%;
+    width:150px;
+    text-align:center;
+    border:red 1px;
+}
+
+/*make the link color for the header white*/
+.header_links a:link{
+    color:white;
+}
+
+.header_links a:visited{
+    color:white;
+}
+
+.header_border{
+    width:2px;
+    background-color: white;
+    height:40%;
+}
+
+/*removes underline from hyperlinks*/
+a:link{
+    text-decoration: none;
+}
+
+#story_sourcing{
+    margin-top:50px;
+    font-family:Helvetica,sans-serif;
+    font-style:italic;
+    color:rgb(65, 65, 65);
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#footer{
+    height:9%;
+    background-color: black;
+    margin-top:9%;
 }
 
 @media (orientation: portrait) {

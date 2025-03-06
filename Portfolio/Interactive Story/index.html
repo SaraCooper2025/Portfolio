@@ -2,9 +2,18 @@
     <link href="style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-  <div id="header">
-    <div id="header_name">Sara Cooper</div>
-  </div>
+    <div id="header">
+      <div id="header_name">Sara Cooper</div>
+      <div id="links_to_pages">
+        <div class="header_links"><a href="http://127.0.0.1:3000/Data%20Visualization/index.html">Data Visualization</a></div>
+        <div class="header_border"></div>
+        <div class="header_links"><a href="http://127.0.0.1:3000/Video/index.html">Video</a></div>
+        <div class="header_border"></div>
+        <div class="header_links"><a href="http://127.0.0.1:3000/Interactive%20Story/index.html">Feature Interactive</a></div>
+        <div class="header_border"></div>
+        <div class="header_links">Resume</div>
+      </div>
+    </div>
   <!--javascript code to get the header to move on scroll-->
   <script>
     window.onscroll = function() {scrollFunction()};
@@ -25,13 +34,13 @@
     <p>The Michigan Ice Fest still has a long way to go if it is to meet its goal of being energy neutral. A major part of this effort is in education so that visitors understand how they can individually reduce their carbon footprints.</p>
     <p>Explore the interactive below to see how much carbon is emitted from traveling across major cities in the United States to the Michigan Ice Fest.</p>
 </div>
-
 <div id="horizontal_line"></div>
-
+<!--Tableau interactive embed code, the piece on Tableau Public is available here: "https://public.tableau.com/app/profile/sara.cooper1440/viz/shared/X6MQ33QW3" -->
 <div class='tableauPlaceholder' id='viz1741060634541'>
     <noscript><a href='#'>
         <img alt='C02 Total ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CarbonCostsTravelingMichiganIceFest&#47;C02Total&#47;1_rss.png' style='border: none' />
-    </a></noscript><object class='tableauViz'  style='display:none;'>
+    </a></noscript>
+    <object class='tableauViz'  style='display:none;'>
         <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
         <param name='embed_code_version' value='3' />
         <param name='site_root' value='' />
@@ -58,4 +67,16 @@ if ( divElement.offsetWidth > 800 ) {vizElement.style.width='1400px';vizElement.
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
+<div id="horizontal_line"></div>
+<div id="story_sourcing">
+  <p>Data came from a variety of sources to get carbon emissions, distance traveled and energy expenditure totals. This includes:</p>
+  <ul>
+    <li><a href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-total-cities-and-towns.html">Census data</a> to get the most populated cities in the U.S.</li>
+    <li><a href="https://www.bts.gov/content/estimated-national-average-vehicle-emissions-rates-vehicle-vehicle-type-using-gasoline-and">Bureau of Transportation</a> statistics to get the carbon emissions and BTU expenditure per mile for different vehicle types.</li>
+    <li><a href="https://developers.google.com/maps/documentation/distance-matrix/overview">Google Maps Distance Matrix API</a> to get the precise distance for travel to Munising, Michigan from different cities.</li>
+    <li><a href="https://travelimpactmodel.org/">The Travel Impact Model</a> which Google uses to calculate carbon expenditure for flights.</li>
+  </ul>
+  <p>Coordinates for driving and flying were captured in Geo.JSON files and uploaded to Tableau. Air travel emissions were taken from Google, while driving emissions were calculated using Bureau of Transportation data.</p>
+</div>
+<div id="footer"></div>
 </body>
