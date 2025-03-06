@@ -2,35 +2,55 @@
     <link href="style.css" type="text/css" rel="stylesheet">
   </head>
   <body>
-    <div id="header">
-      <div id="header_name">Sara Cooper</div>
-      <div id="links_to_pages">
-        <div class="header_links"><a href="http://127.0.0.1:3000/Data%20Visualization/index.html">Data Visualization</a></div>
-        <div class="header_border"></div>
-        <div class="header_links"><a href="http://127.0.0.1:3000/Video/index.html">Video</a></div>
-        <div class="header_border"></div>
-        <div class="header_links"><a href="http://127.0.0.1:3000/Interactive%20Story/index.html">Feature Interactive</a></div>
-        <div class="header_border"></div>
-        <div class="header_links">Resume</div>
-      </div>
+    <div class="header" id="myheader">
+      <a href="http://127.0.0.1:3000/Landing%20Page/index.html" class="active" style="font-weight:bolder; font-size:20px">Sara Cooper</a>
+      <a href="http://127.0.0.1:3000/Storymaps/index.html">Storymaps</a>
+      <a href="http://127.0.0.1:3000/Video/index.html">Video</a>
+      <a href="http://127.0.0.1:3000/Interactive%20Story/index.html">Feature Interactive</a>
+      <a href="file:///C:/Users/scoop/OneDrive/Documents/Sara%20Cooper%202025%20Resume.pdf">Resume</a>
+      <a href="javascript:void(0);" style="font-size:20px" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
-  <!--javascript code to get the header to move on scroll-->
-  <script>
-    window.onscroll = function() {scrollFunction()};
-    function scrollFunction() {
-      if (document.body.scrollTop >50 || document.documentElement.scrollTop >50) {
-        document.getElementById("header").style.height = "9%";
+    <!--javascript code to transform the header into a dropdown selection in portrait mode-->
+    <script>
+      function myFunction() {
+      var x = document.getElementById("myheader");
+      if (x.className === "header") {
+        x.className += " responsive";
       } else {
-        document.getElementById("header").style.height = "3%";
+        x.className = "header";
       }
     }
-  </script>
+    </script>
+    
+    <!--javascript code to get the header to move on scroll-->
+    <script>
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+        if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: landscape)").matches) {
+          document.getElementById("myheader").style.height = "9%";
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: landscape)").matches) {
+          document.getElementById("myheader").style.height = "auto";
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: portrait)").matches) {
+          document.getElementById("myheader").style.height = "auto";
+        } else if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: portrait)").matches) {
+          document.getElementById("myheader").style.height = "auto";
+        }
+      }
+    </script>
+
+<div id="headline">
+  <h1>Carbon Costs and the Michigan Ice Fest</h1>
+</div>
 
 <div id="text">
-    <h1>Carbon Costs and the Michigan Ice Fest</h1>
     <p>Every year over a thousand climbers travel to the Michigan Ice Fest in Munising, Michigan. Each of them emits a carbon cost in traveling to the event.</p>
     <p>With few alternatives to driving or flying long distances, it can be difficult to minimize the carbon footprint of travel for adventure sports like ice climbing. Organizers at the Michigan Ice Fest do their part to reduce emissions by offering donations to carbon offsets for those attending the event.</p>
     <p>In 2025 nearly $700 were generated in donations by attendees. Proceeds went to the Honnold Foundation, a clean energy supplier founded by famous free solo climber Alex Honnold.</p>
+    <img src="Climber.png" alt="An ice climber ascends a frozen cliff with climbing tools."/>
+      <!--For some reasons styling the <caption> class in CSS isn't working, so I put it in a div container-->
+      <div id="caption">
+        <caption>A first time ice climber at the Michigan Ice Fest ascends a frozen cliff at the Demo Wall, where those new to the sport have the chance to learn from experienced guides, February 2025.(Photo/Sara Cooper)</caption>
+      </div>
     <p>The Michigan Ice Fest still has a long way to go if it is to meet its goal of being energy neutral. A major part of this effort is in education so that visitors understand how they can individually reduce their carbon footprints.</p>
     <p>Explore the interactive below to see how much carbon is emitted from traveling across major cities in the United States to the Michigan Ice Fest.</p>
 </div>
@@ -69,14 +89,14 @@ if ( divElement.offsetWidth > 800 ) {vizElement.style.width='1400px';vizElement.
 </script>
 <div id="horizontal_line"></div>
 <div id="story_sourcing">
-  <p>Data came from a variety of sources to get carbon emissions, distance traveled and energy expenditure totals. This includes:</p>
+  <p>Full datasets are linked here. Data came from a variety of sources to get carbon emissions, distance traveled and energy expenditure totals. This includes:</p>
   <ul>
     <li><a href="https://www.census.gov/data/tables/time-series/demo/popest/2020s-total-cities-and-towns.html">Census data</a> to get the most populated cities in the U.S.</li>
     <li><a href="https://www.bts.gov/content/estimated-national-average-vehicle-emissions-rates-vehicle-vehicle-type-using-gasoline-and">Bureau of Transportation</a> statistics to get the carbon emissions and BTU expenditure per mile for different vehicle types.</li>
     <li><a href="https://developers.google.com/maps/documentation/distance-matrix/overview">Google Maps Distance Matrix API</a> to get the precise distance for travel to Munising, Michigan from different cities.</li>
     <li><a href="https://travelimpactmodel.org/">The Travel Impact Model</a> which Google uses to calculate carbon expenditure for flights.</li>
   </ul>
-  <p>Coordinates for driving and flying were captured in Geo.JSON files and uploaded to Tableau. Air travel emissions were taken from Google, while driving emissions were calculated using Bureau of Transportation data.</p>
+  <p>Coordinates for driving and flying were captured in Geo.JSON files and uploaded to Tableau. <a href="Travel By Vehicle Type Data.xlsx">Emissions</a> for air travel were calculated from Google while emissions from driving were calculated using Bureau of Transportation data.</p>
 </div>
 <div id="footer"></div>
 </body>

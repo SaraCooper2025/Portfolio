@@ -2,26 +2,38 @@
   <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div id="header">
-  <div id="header_name">Sara Cooper</div>
-  <div id="links_to_pages">
-    <div class="header_links"><a href="http://127.0.0.1:3000/Data%20Visualization/index.html">Data Visualization</a></div>
-    <div class="header_border"></div>
-    <div class="header_links"><a href="http://127.0.0.1:3000/Video/index.html">Video</a></div>
-    <div class="header_border"></div>
-    <div class="header_links"><a href="http://127.0.0.1:3000/Interactive%20Story/index.html">Feature Interactive</a></div>
-    <div class="header_border"></div>
-    <div class="header_links">Resume</div>
-  </div>
+<div class="header" id="myheader">
+  <a href="http://127.0.0.1:3000/Landing%20Page/index.html" class="active" style="font-weight:bolder; font-size:20px">Sara Cooper</a>
+  <a href="http://127.0.0.1:3000/Storymaps/index.html">Storymaps</a>
+  <a href="http://127.0.0.1:3000/Video/index.html">Video</a>
+  <a href="http://127.0.0.1:3000/Interactive%20Story/index.html">Feature Interactive</a>
+  <a href="file:///C:/Users/scoop/OneDrive/Documents/Sara%20Cooper%202025%20Resume.pdf">Resume</a>
+  <a href="javascript:void(0);" style="font-size:20px" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
+
+<script>
+  function myFunction() {
+  var x = document.getElementById("myheader");
+  if (x.className === "header") {
+    x.className += " responsive";
+  } else {
+    x.className = "header";
+  }
+}
+</script>
+
 <!--javascript code to get the header to move on scroll-->
 <script>
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
-    if (document.body.scrollTop >50 || document.documentElement.scrollTop >50) {
-      document.getElementById("header").style.height = "9%";
-    } else {
-      document.getElementById("header").style.height = "3%";
+    if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: landscape)").matches) {
+      document.getElementById("myheader").style.height = "9%";
+    } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: landscape)").matches) {
+      document.getElementById("myheader").style.height = "auto";
+    } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: portrait)").matches) {
+      document.getElementById("myheader").style.height = "auto";
+    } else if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: portrait)").matches) {
+      document.getElementById("myheader").style.height = "auto";
     }
   }
 </script>
@@ -77,12 +89,7 @@
     </div>
   </div>
 </div>
-<script>
-  window.onload = function()
-  {
-    $("#embed").show();
-  }
-</script>
+
 <!--interactive story link-->
 <div id="horizontal_divider1"></div>
 <div id="Interactive_link">
@@ -95,7 +102,7 @@
     <div id="work_type_1">
       <div id="vertical_bar_2"></div>
       <div class="work_type_text">
-        Data Visualization
+        Storymaps
         <p>Turning numbers into meaning with beautifully designed charts, maps and infographics</p>
         <div class="images_for_work_type">
           <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data_Visualization/index.html"><img src="Data Visualization.png" alt="Link to data visualization portfolio"></a>

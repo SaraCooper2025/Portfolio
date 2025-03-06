@@ -39,41 +39,29 @@ embed{
 /*id objects*/
 
 /*header elements - duplicate on each page*/
-#header{
+.header{
   background-color:black;
-  height:3%;
-  width: 100%;
-  margin:0;
+  width:100%;
   position: fixed;
-  transition: 0.4s;
-  top:0;
+  transition-duration:0.4s;
   z-index:100;
-  display:flex;
-  flex-direction:row;
-}
-  
-#header_name{
-  color:rgb(255, 255, 255);
-  font-family:helvetica, sans-serif;
-  font-weight:900;
-  align-content: center;
-  height: 100%;
-  margin-left:2%
+  overflow:hidden;
 }
 
-#links_to_pages{
-  display:flex;
-  flex-direction:row;
+.header a{
+  float:left;
+  display:block;
   color:white;
-  margin-right:0;
-  margin-left:auto;
   border: 1px red;
-  align-items:center;
-  justify-content: center;
-  width:50%;
   font-family:Helvetica,sans-serif;
+  text-align:center;
+  font-size:20px;
+  padding: 14px 20px;
 }
 
+.headline_title a{
+  color:white;
+}
 
 /*bars and dividers*/
 #horizontal_divider1{
@@ -196,6 +184,10 @@ embed{
   margin-bottom:100px;
 }
 
+#Interactive_Link a{
+  color:purple;
+}
+
 #work_type_2{
   display: flex;
   flex-direction: row;
@@ -261,28 +253,18 @@ embed{
   margin-bottom:50px;
 }
 
-.header_links{
-  margin-left:5%;
+#icon{
+  margin-left:0%;
   margin-right: 5%;
-  width:150px;
-  text-align:center;
+  width:auto;
   border:red 1px;
 }
 
+#icon a:link{
+  color:white;
+}
+
 /*make the link color for the header white*/
-.header_links a:link{
-  color:white;
-}
-
-.header_links a:visited{
-  color:white;
-}
-
-.header_border{
-  width:2px;
-  background-color: white;
-  height:40%;
-}
 
 #recent_work{
   margin-left:10%;
@@ -320,8 +302,17 @@ embed{
   background-color: black;
 }
 
+.header .icon{
+  display:none;
+}
+
+.header a:hover{
+  background-color:rgb(56, 56, 56);
+}
+
 @media (orientation: portrait) {
-#headshot_container{
+
+  #headshot_container{
   display:flex;
   flex-direction:column;
   padding-bottom:50px;
@@ -358,6 +349,38 @@ margin-top:5%;
 margin-bottom:5%;
 width:90%;
 box-shadow: gray 0px 0px 30px;
+}
+
+.header{
+  position:static;
+}
+
+.header a:not(:first-child){
+  display:none;
+}
+
+.header a.icon{
+  float:right;
+  display:block;
+}
+
+.header.responsive {
+  position:relative;
+}
+.header.responsive a.icon {
+  position:absolute;
+  right:0;
+  top:0;
+}
+
+.header.responsive a{
+  float:none;
+  display:block;
+  text-align:left;
+}
+
+.header_border{
+  display:none;
 }
 
 }
