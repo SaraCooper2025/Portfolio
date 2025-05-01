@@ -1,0 +1,75 @@
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+    <body>
+        <div class="header" id="myheader">
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Landing%20Page/index.html" class="active" style="font-weight:bolder; font-size:20px">Sara Cooper</a>
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data%20Visualization/index.html">Data Visualization</a>
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Video/index.html">Video</a>
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Storymaps/index.html">Storymaps</a>
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Resume/index.html">Resume</a>
+            <a href="javascript:void(0);" style="font-size:20px" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myheader");
+        if (x.className === "header") {
+        x.className += " responsive";
+        } else {
+        x.className = "header";
+        }
+    }
+    </script>
+<!--javascript code to get the header to move on scroll-->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+        if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: landscape)").matches) {
+            document.getElementById("myheader").style.height = "50px"; document.getElementById("myheader").style.paddingTop = "0px"
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: landscape)").matches) {
+            document.getElementById("myheader").style.height = "100px"; document.getElementById("myheader").style.paddingTop = "0px"
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: portrait)").matches) {
+            document.getElementById("myheader").style.height = "auto";
+        } else if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: portrait)").matches) {
+            document.getElementById("myheader").style.height = "auto";
+        }
+        }
+    </script>
+<div id="headline_box">
+    <div id="headline">Data Visualization</div>
+    <div id="divider_line"></div>
+</div>
+<div class="interactive_title">Journalism Visualizations</div>
+<div class="image_side_by_side1">
+    <div class="img1"><img src="Picture1.png", width="100%"/></div>
+    <div class="vertical_bar1"></div>
+    <div class="p1">State Protections for Transgender Youth<div class="date">January 2025</div></div>
+</div>
+<div class="image_side_by_side2">
+    <div class="img2"><img src="Picture2.png", width="100%" /></div>
+    <div class="vertical_bar2"></div>
+    <div class="p2">U.S. Population Projections<div class="date">January 2025</div></div>
+</div>
+<div class="image_side_by_side1">
+    <div class="img1"><img src="Picture3.png", width="100%"/></div>
+    <div class="vertical_bar1"></div>
+    <div class="p1">Measuring Environmental Justice in Cook County<div class="date">February 2025</div></div>
+</div>
+<div class="image_side_by_side2">
+    <div class="img2"><img src="Picture4.png", width="100%" /></div>
+    <div class="vertical_bar2"></div>
+    <div class="p2">Types of Citizen Science Research<div class="date">February 2025</div></div>
+</div>
+<div class="section_divider1"></div>
+<div class="section_divider2"></div>
+<div class="interactive_title">Interactive Dashboard</div>
+<div class="interactive_byline">This dashboard was created in Tableau to accompany a written piece on the carbon cost of travel to the Michigan Ice Fest in the Upper Peninsula.</div>
+<div class="visit_site"><div class="link"><a href="https://public.tableau.com/shared/B5XJC837R?:display_count=n&:origin=viz_share_link">Visit Dashboard</a></div></div>
+<div class="image_side_by_side1">
+    <div class="img1"><img src="Picture5.png", width="100%"/></div>
+    <div class="vertical_bar1"></div>
+    <div class="p1"><div class="date">March 2025</div></div>
+</div>
+<div class="space"></div>
+<div class="footer"></div>
+</body>

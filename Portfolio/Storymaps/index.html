@@ -2,27 +2,82 @@
     <link href="style.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<div id="header">
-    <div id="header_name">Sara Cooper</div>
+    <div class="header" id="myheader">
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Landing%20Page/index.html" class="active" style="font-weight:bolder; font-size:20px">Sara Cooper</a>
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data%20Visualization/index.html">Data Visualization</a>
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Video/index.html">Video</a>
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Storymaps/index.html">Storymaps</a>
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Resume/index.html">Resume</a>
+        <a href="javascript:void(0);" style="font-size:20px" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myheader");
+        if (x.className === "header") {
+        x.className += " responsive";
+        } else {
+        x.className = "header";
+        }
+    }
+    </script>
+<!--javascript code to get the header to move on scroll-->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+        if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: landscape)").matches) {
+            document.getElementById("myheader").style.height = "50px"; document.getElementById("myheader").style.paddingTop = "0px"
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: landscape)").matches) {
+            document.getElementById("myheader").style.height = "100px"; document.getElementById("myheader").style.paddingTop = "0px"
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: portrait)").matches) {
+            document.getElementById("myheader").style.height = "auto";
+        } else if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: portrait)").matches) {
+            document.getElementById("myheader").style.height = "auto";
+        }
+        }
+    </script>
+<div id="headline_box">
+    <div id="headline">Storymaps</div>
+    <div id="divider_line"></div>
 </div>
-<div id="headline">Storymaps</div>
-<div id="divider_line"></div>
 <div class="interactive_title">Sustainable Design: Chicago's Past, Present and Future</div>
 <div class="interactive_byline">This project was a broad exploration of sustainable architecture in Chicago, citing expert sources on the cutting edge of environmental building practices.</div>
 <div class="visit_site"><a href="https://storymaps.arcgis.com/stories/ec4839f853f443b692ae3abd485b2587">Visit Site</a></div>
-<div class="image_side_by_side">
-    <img src="Architecture & Environmentalism Timeline.png", width="50%" />
-    <div class="vertical_bar"></div>
-    <p>Several infographics and visuals were designed for this project, such as this timeline showing the evolution of sustainable design over the past half century.</p>
+<div class="image_side_by_side1">
+    <div class="img1"><img src="Architecture & Environmentalism Timeline.png", width="100%"/></div>
+    <div class="vertical_bar1"></div>
+    <div class="p1">Several infographics and visuals were designed for this project, such as this timeline showing the evolution of sustainable design over the past half century.</div>
 </div>
-<div class="image_side_by_side">
-    <img src="Keller Center Features.png", width="50%" />
-    <div class="vertical_bar"></div>
-    <p>This storymap focused on three buildings that epitomize the past, present and future of sustainable design. For each project, specific features were highlighted through visuals and expert commentary.</p>
+<div class="image_side_by_side2">
+    <div class="img2"><img src="Keller Center Features.png", width="100%" /></div>
+    <div class="vertical_bar2"></div>
+    <div class="p2">This storymap focused on three buildings that epitomize the past, present and future of sustainable design. For each building, specific features were highlighted through visuals and expert commentary.</div>
 </div>
-<div class="image_side_by_side">
-    <img src="Architecture & Environmentalism Timeline.png", width="50%" />
-    <div class="vertical_bar"></div>
-    <p>Several infographics and visuals were designed for this project, such as this timeline showing the evolution of sustainable design over the past half century.</p>
+<div class="image_side_by_side1">
+    <div class="img1"><img src="LEED Buildings Chicago.png", width="100%"/></div>
+    <div class="vertical_bar1"></div>
+    <div class="p1">The story concludes with a map built with ArcGIS that plots the locations of over 400 platinum and gold LEED certified buildings in Chicago.</div>
 </div>
+<div class="section_divider1"></div>
+<div class="section_divider2"></div>
+<div class="interactive_title">Building to the Great Pyramid</div>
+<div class="interactive_byline">I created a geographical tour of the early Egyptian pyramids, plotting the evolution of their design and construction. Beginning with the first experiments in pyramid building, I crafted  3-D models of the first 7 monumental Egyptian pyramids up to their zenith constructions at Giza.</div>
+<div class="visit_site"><a href="https://storymaps.arcgis.com/stories/5421952371854ae9b5ecf9db4c3045bd">Visit Site</a></div>
+<div class="image_side_by_side1">
+    <div class="img1"><img src="Pyramid 1.png", width="100%"/></div>
+    <div class="vertical_bar1"></div>
+    <div class="p1">
+        As users scroll through the page the map on the right traces the path of pyramid construction across Egypt.</div>
+</div>
+<div class="image_side_by_side2">
+    <div class="img2"><img src="Keller Center Features.png", width="100%" /></div>
+    <div class="vertical_bar2"></div>
+    <div class="p2">Mark Lehner's The Complete Pyramids provides detailed schematics on pyramid complexes and interior structures.</div>
+</div>
+<div class="image_side_by_side1">
+    <div class="img1"><img src="LEED Buildings Chicago.png", width="100%"/></div>
+    <div class="vertical_bar1"></div>
+    <div class="p1">The story concludes with a map built with ArcGIS that plots the locations of over 400 platinum and gold LEED certified buildings in Chicago.</div>
+</div>
+<div class="space"></div>
+<div class="footer"></div>
 </body>

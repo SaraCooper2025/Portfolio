@@ -1,0 +1,44 @@
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <body>
+        <div class="header" id="myheader">
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Landing%20Page/index.html" class="active" style="font-weight:bolder; font-size:20px">Sara Cooper</a>
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data%20Visualization/index.html">Data Visualization</a>
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Video/index.html">Video</a>
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Storymaps/index.html">Storymaps</a>
+            <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Resume/index.html">Resume</a>
+            <a href="javascript:void(0);" style="font-size:20px" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myheader");
+        if (x.className === "header") {
+        x.className += " responsive";
+        } else {
+        x.className = "header";
+        }
+    }
+    </script>
+<!--javascript code to get the header to move on scroll-->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+        if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: landscape)").matches) {
+            document.getElementById("myheader").style.height = "50px"; document.getElementById("myheader").style.paddingTop = "0px"
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: landscape)").matches) {
+            document.getElementById("myheader").style.height = "100px"; document.getElementById("myheader").style.paddingTop = "0px"
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: portrait)").matches) {
+            document.getElementById("myheader").style.height = "auto";
+        } else if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: portrait)").matches) {
+            document.getElementById("myheader").style.height = "auto";
+        }
+        }
+    </script>
+<div id="headline_box">
+    <div id="headline">Resume</div>
+    <div id="divider_line"></div>
+</div>
+<div class="img"><img src="Sara Cooper 2025 Resume.jpg" /></div>
+</body>

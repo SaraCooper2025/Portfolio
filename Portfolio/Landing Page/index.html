@@ -3,11 +3,11 @@
 </head>
 <body>
 <div class="header" id="myheader">
-  <a href="http://127.0.0.1:3000/Landing%20Page/index.html" class="active" style="font-weight:bolder; font-size:20px">Sara Cooper</a>
-  <a href="http://127.0.0.1:3000/Storymaps/index.html">Storymaps</a>
-  <a href="http://127.0.0.1:3000/Video/index.html">Video</a>
-  <a href="http://127.0.0.1:3000/Interactive%20Story/index.html">Feature Interactive</a>
-  <a href="file:///C:/Users/scoop/OneDrive/Documents/Sara%20Cooper%202025%20Resume.pdf">Resume</a>
+  <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Landing%20Page/index.html" class="active" style="font-weight:bolder; font-size:20px">Sara Cooper</a>
+  <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data%20Visualization/index.html">Data Visualization</a>
+  <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Video/index.html">Video</a>
+  <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Storymaps/index.html">Storymaps</a>
+  <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Resume/index.html">Resume</a>
   <a href="javascript:void(0);" style="font-size:20px" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 
@@ -26,21 +26,21 @@
 <script>
   window.onscroll = function() {scrollFunction()};
   function scrollFunction() {
-    if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: landscape)").matches) {
-      document.getElementById("myheader").style.height = "9%";
-    } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: landscape)").matches) {
+  if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: landscape)").matches) {
+      document.getElementById("myheader").style.height = "50px"; document.getElementById("myheader").style.paddingTop = "0px"
+  } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: landscape)").matches) {
+      document.getElementById("myheader").style.height = "100px"; document.getElementById("myheader").style.paddingTop = "0px"
+  } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: portrait)").matches) {
       document.getElementById("myheader").style.height = "auto";
-    } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: portrait)").matches) {
+  } else if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: portrait)").matches) {
       document.getElementById("myheader").style.height = "auto";
-    } else if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: portrait)").matches) {
-      document.getElementById("myheader").style.height = "auto";
-    }
+  }
   }
 </script>
 <!--container for my headshot and title-->
 <div id=headshot_container>
   <div id="headshot">
-    <img src="Sara Cooper Headshot_Optimized.png" alt="headshot image of Sara Cooper"/>
+    <img src="Sara Cooper Headshot_Optitmized_4.png" alt="headshot image of Sara Cooper"/>
   </div>
   <div id="title">
     <div id="name">Sara Cooper</div>
@@ -52,22 +52,18 @@
   <p>In 2024 I entered Northwestern Medill Masters of Science Journalism program. Through my work I hope to communicate the importance of critical issues like climate change and sustainability while building an appreciation in others for science and nature.</p>
   <p>Previous to my journalism education I have worked in public relations with a focus on data communication and visualization. As I expand on my journalism portfolio I'm avid to pursue stories that build on data to uncover truth.</p>
 </div>
-<!--horizontal lines-->
-<div id="horizontal_divider1"></div>
-<div id="horizontal_divider2"></div>
-<div id="horizontal_divider3"></div>
-<div id="horizontal_divider4"></div>
-<div id="horizontal_divider5"></div>
+<div class="section_divider1"></div>
+<div class="section_divider2"></div>
 <h2>Recent Work</h2>
 <!--recent work examples, each is embedded for the page itself-->
 <div id="recent_work">
   <div class="work_sample">
-    <div class="headline_embed">
+    <div class="headline_pic">
       <div class="headline_title">
         <a href ="https://www.chicagoreporter.com/its-time-to-talk-about-environmental-justice-in-cook-county/">It's Time to Talk About Environmental Justice in Cook County</a>
         <div class="outlet">| The Chicago Reporter |</div>
       </div>
-      <embed id="embed" src="https://www.chicagoreporter.com/its-time-to-talk-about-environmental-justice-in-cook-county/">
+      <img id="feature_image" src="Izaak Walton.png">
     </div>
   </div>
   <div class="work_sample">
@@ -76,7 +72,7 @@
         <a href ="https://climatechange.medill.northwestern.edu/the-antarctic-ice-sheet-is-melting-howd-it-happen-so-fast/">The Antarctic ice sheet is melting. How'd it happen so fast?</a>
         <div class="outlet">| Medill Climate News |</div>
       </div>
-      <embed id="embed" src="https://climatechange.medill.northwestern.edu/the-antarctic-ice-sheet-is-melting-howd-it-happen-so-fast/">
+      <img id="feature_image" src="Antarctica Feature Picture.png">
     </div>
   </div>
   <div class="work_sample">
@@ -85,40 +81,40 @@
         <a href ="https://climatechange.medill.northwestern.edu/far-from-a-glacial-pace-new-research-indicates-a-swift-end-to-the-last-ice-age/">Far from a glacial pace: New research indicates a swift end to the last ice age</a>
         <div class="outlet">| Medill Climate News |</div>
       </div>
-      <embed id="embed" src="https://climatechange.medill.northwestern.edu/far-from-a-glacial-pace-new-research-indicates-a-swift-end-to-the-last-ice-age/">
+      <img id="feature_image" src="Cordillera Darwins.png">
     </div>
   </div>
 </div>
-
-<!--interactive story link-->
-<div id="horizontal_divider1"></div>
-<div id="Interactive_link">
-  <a href="http://127.0.0.1:3000/Interactive%20Story/index.html">Featured Interactive Story</a>
-</div>
-<div id="horizontal_divider1"></div>
+<div class="section_divider1"></div>
+<div class="section_divider2"></div>
 <h2>Other Work Samples</h2>
 <!--Portfolios for each type of work, each linking to separate page-->
 <div id="more_work">
     <div id="work_type_1">
-      <div id="vertical_bar_2"></div>
-      <div class="work_type_text">
-        Storymaps
-        <p>Turning numbers into meaning with beautifully designed charts, maps and infographics</p>
-        <div class="images_for_work_type">
-          <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data_Visualization/index.html"><img src="Data Visualization.png" alt="Link to data visualization portfolio"></a>
-        </div>
+      <div id="vertical_bar_1"></div>
+      <div id="work_type_text1">
+        <h1>Data Visualization</h1>
+        <div class="work_type_paragraph">Turning numbers into meaning with beautifully designed charts, maps and infographics</div>
+        <div id="other_work_images1"><a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data%20Visualization/index.html"><img src="Data Visualization_2.png" alt="Link to data visualization portfolio"></a></div>
       </div>
     </div>
     <div id="work_type_2">
       <div id="vertical_bar_2"></div>
-      <div class="work_type_text">
-        Video
-        <p>Short-form pieces explore topics on nature and outdoor recreation</p>
-        <div class="images_for_work_type">
-          <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Video/index.html"><img src="Play Button.png" alt="Link to video portfolio"></a>
-        </div>
+      <div id="work_type_text2">
+        <h1>Video</h1>
+        <div class="work_type_paragraph">Short-form pieces explore topics on nature and outdoor recreation</div>
+          <div id="other_work_images2"><a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Video/index.html"><img src="Video_2.png" alt="Link to video portfolio"></a></div>
+      </div>
+    </div>
+    <div id="work_type_1">
+      <div id="vertical_bar_1"></div>
+      <div id="work_type_text1">
+        <h1>Storymaps</h1>
+        <div class="work_type_paragraph">Map-based interactives that walk through a story in time and space</div>
+        <div id="other_work_images1"><a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Storymaps/index.html"><img src="Storymaps.png" alt="Link to data visualization portfolio"></a></div>
       </div>
     </div>
 </div>
-<div id="footer"></div>
+<div class="space"></div>
+<div class="footer"></div>
 </body>

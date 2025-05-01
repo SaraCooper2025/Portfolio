@@ -1,0 +1,62 @@
+<head>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="header" id="myheader">
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Landing%20Page/index.html" class="active" style="font-weight:bolder; font-size:20px">Sara Cooper</a>
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Data%20Visualization/index.html">Data Visualization</a>
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Video/index.html">Video</a>
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Storymaps/index.html">Storymaps</a>
+        <a href="http://127.0.0.1:3000/GitHub/InteractiveDemo/Portfolio/Resume/index.html">Resume</a>
+        <a href="javascript:void(0);" style="font-size:20px" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+    <script>
+        function myFunction() {
+        var x = document.getElementById("myheader");
+        if (x.className === "header") {
+        x.className += " responsive";
+        } else {
+        x.className = "header";
+        }
+    }
+    </script>
+<!--javascript code to get the header to move on scroll-->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+        if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: landscape)").matches) {
+            document.getElementById("myheader").style.height = "50px"; document.getElementById("myheader").style.paddingTop = "0px"
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: landscape)").matches) {
+            document.getElementById("myheader").style.height = "100px"; document.getElementById("myheader").style.paddingTop = "0px"
+        } else if ((document.body.scrollTop <50 || document.documentElement.scrollTop <50) && window.matchMedia("(orientation: portrait)").matches) {
+            document.getElementById("myheader").style.height = "auto";
+        } else if ((document.body.scrollTop >50 || document.documentElement.scrollTop >50) && window.matchMedia("(orientation: portrait)").matches) {
+            document.getElementById("myheader").style.height = "auto";
+        }
+        }
+    </script>
+<div id="headline_box">
+    <div id="headline">Video</div>
+    <div id="divider_line"></div>
+</div>
+<div class="video_side_by_side1">
+    <div class="video1"><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1061458701?h=980a1ad1e4&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Ice Climbing at the Michigan Ice Fest has a High Carbon Cost - But it Doesn&#039;t Have To"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+    <div class="vertical_bar1"></div>
+    <div class="title_and_description">
+        <div class="video_title1">The Michigan Ice Fest is Serious on Sustainability; They Can’t Afford Not to Be</div>
+        <div class="p1">I traveled to the Michigan Ice Fest in the Upper Peninsula to cover sustainability initiative at the event</div>
+    </div>
+</div>
+<div class="section_divider1"></div>
+<div class="section_divider2"></div>
+<div class="video_side_by_side2">
+    <div class="video2"><div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1052669773?h=d4a5a2d40f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Queers on the Rocks Video Package"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script></div>
+    <div class="vertical_bar2"></div>
+    <div class="title_and_description">
+        <div class="video_title2">Queers on the Rocks is Building Community Through Climbing</div>
+        <div class="p2">I profiled the Chicago-based organization Queers on the Rocks to highlight how climbing can be a basis of community, especially for outsiders</div>
+    </div>
+</div>    
+<div class="space"></div>
+<div class="footer"></div>
+</body>
